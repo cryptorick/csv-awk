@@ -13,8 +13,10 @@ BEGIN {
 		if (substr($0, 1, 1) == "\"")
 		    printf("\"")
 	    } while (match($0, /^"[^"]*"/))
-	} else if (match($0, /^[^ ,]+/)) {
-	    printf("%s", substr($0, 1, RLENGTH))
+	} else if (match($0, /^[^,]+/)) {
+	    lvalue = substr($0, 1, RLENGTH)
+	    sub(/ +$/, "", lvalue)
+	    printf("%s", lvalue)
 	    $0 = substr($0, RLENGTH+1)
 	} else if ($0 == "") {
 	    printf("\n")
