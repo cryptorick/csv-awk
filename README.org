@@ -1,0 +1,9 @@
+* awk-csv
+
+Code that helps you use =awk= to manipulate CSV files.
+
+** Credits
+
+- Original design and implementation by John W. Warren.
+
+- Code posted on github by cryptorick with the express written permission of the author.
